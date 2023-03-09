@@ -4,6 +4,7 @@
   --main-transition-duration: 350ms;
   --main-line-height: 1.6;
   --main-section-padding: 82px;
+  --header-height: 72px;
 }
 
 * {
@@ -53,4 +54,42 @@ ul {
   .container {
     width: 1170px;
   }
+}
+
+header {
+  background-color: white;
+  position: relative;
+  box-shadow: 0 0 10px #d3d3d3;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--header-height);
+  color: var(--primary-color);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+header .main-nav {
+  display: flex;
+}
+
+header .main-nav > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--header-height);
+  padding: 0 30px;
+  color: black;
+  transition: var(--main-transition-duration);
 }
