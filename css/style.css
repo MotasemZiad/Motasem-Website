@@ -1,6 +1,46 @@
 :root {
+  --primary-color: #2196f3;
+  --primary-color-alt: #1787e0;
+  --main-transition-duration: 350ms;
+  --main-line-height: 1.6;
+  --main-section-padding: 82px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Cairo", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
