@@ -2,6 +2,7 @@
   --primary-color: #2196f3;
   --primary-color-alt: #1787e0;
   --grey-color: #787878;
+  --light-grey-color: #fafafa;
   ---transition-duration: 350ms;
   ---line-height: 1.6;
   ---section-padding: 82px;
@@ -58,8 +59,8 @@ ul {
 }
 
 header {
-  background-color: white;
   position: relative;
+  background-color: white;
   box-shadow: 0 0 8px #d3d3d3;
 }
 
@@ -123,7 +124,7 @@ header .main-nav > li > a::before {
 
 header .main-nav > li > a:hover {
   color: var(--primary-color);
-  background-color: #fafafa;
+  background-color: var(--light-grey-color);
 }
 
 header .main-nav > li > a:hover::before {
@@ -138,6 +139,88 @@ header .main-nav > li > a:hover::before {
   }
 }
 
+header .mega-menu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 30px;
+  z-index: 100;
+  background-color: white;
+  border-bottom: 3px solid var(--primary-color);
+  display: flex;
+  gap: 40px;
+  top: calc(100% + 50px);
+  transition: top var(---transition-duration),
+    opacity var(---transition-duration);
+}
+
+header .mega-menu .image img {
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  header .mega-menu {
+    flex-direction: column;
+    gap: 0;
+    padding: 5px;
+  }
+
+  header .mega-menu .image {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  header .mega-menu .image {
+    display: none;
+  }
+}
+
+header .mega-menu > ul {
+  min-width: 250px;
+  flex: 1;
+}
+
+header .mega-menu > ul li {
+  position: relative;
+}
+
+header .mega-menu > ul li:not(:last-child) {
+  border-bottom: 1px solid #e9e6e6;
+}
+
+@media (max-width: 767px) {
+  header .mega-menu > ul:first-of-type li:last-child {
+    border-bottom: 1px solid #e9e6e6 !important;
+  }
+}
+
+header .mega-menu > ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--light-grey-color);
+  z-index: -1;
+  transition: var(---transition-duration);
+}
+
+header .mega-menu > ul li:hover::before {
+  width: 100%;
+}
+
+header .mega-menu > ul li a {
+  display: block;
+  padding: 15px;
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+header .mega-menu > ul li a i {
+  margin-right: 10px;
+}
 .landing {
   position: relative;
   overflow: hidden;
