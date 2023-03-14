@@ -693,6 +693,13 @@ header .mega-menu > ul li a i {
   margin: 12px 0 0;
 }
 
+.team-members {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  position: relative;
+  background-color: white;
+}
+
 @keyframes up-and-down {
   0%,
   100% {
