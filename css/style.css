@@ -8,7 +8,7 @@
   --transition-duration: 350ms;
   --line-height: 1.6;
   --section-padding: 82px;
-  --header-height: 72px;
+  --main-radius: 8px;
 }
 
 * {
@@ -110,6 +110,7 @@ ul {
 }
 
 header {
+  --header-height: 72px;
   position: relative;
   background-color: white;
   box-shadow: 0 0 8px #d3d3d3;
@@ -379,7 +380,7 @@ header .mega-menu > ul li a i {
 .articles .box {
   background-color: white;
   box-shadow: 0 2px 15px rgb(0 0 0 / 0.1);
-  border-radius: 8px;
+  border-radius: var(--main-radius);
   overflow: hidden;
   transition: transform var(--transition-duration),
     box-shadow var(--transition-duration);
@@ -427,6 +428,22 @@ header .mega-menu > ul li a i {
 
 .articles .box:hover i {
   animation: moving-arrow 600ms linear infinite;
+}
+
+.spikes {
+  position: relative;
+}
+
+.spikes::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%),
+    linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
 }
 
 .gallery {
@@ -480,6 +497,148 @@ header .mega-menu > ul li a i {
   transform: rotate(5deg) scale(1.1);
 }
 
+.features {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  position: relative;
+  background-color: white;
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.features .box {
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.features .box .image-holder {
+  position: relative;
+  overflow: hidden;
+}
+
+.features .box .image-holder::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.features .box .image-holder::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0 175px 500px;
+  border-color: transparent transparent white transparent;
+  transition: var(--transition-duration);
+}
+
+.features .box:hover .image-holder::after {
+  border-width: 0 500px 175px 0;
+}
+
+.features .box .image-holder img {
+  max-width: 100%;
+}
+
+.features .box h2 {
+  position: relative;
+  margin: auto;
+  font-size: 40px;
+  width: fit-content;
+  padding: 15px;
+}
+
+.features .box h2::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
+  width: calc(100% - 30px);
+  height: 3px;
+}
+
+.features .box p {
+  font-size: 20px;
+  color: var(--grey-color);
+  line-height: var(--line-height);
+  padding: 20px;
+  margin: 15px 0;
+}
+
+.features .box a {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 30px;
+  padding: 10px 30px;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: var(--main-radius);
+  transition: var(--transition-duration);
+}
+
+.features .quality .image-holder::before {
+  background-color: #f44036;
+}
+
+.features .quality h2::after {
+  background-color: #f44036;
+}
+
+.features .quality a {
+  color: #f44036;
+  border: 2px solid #f44036;
+  background: linear-gradient(to right, #f44036 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.features .time .image-holder::before {
+  background-color: #009688;
+}
+
+.features .time h2::after {
+  background-color: #009688;
+}
+
+.features .time a {
+  color: #009688;
+  border: 2px solid #009688;
+  background: linear-gradient(to right, #009688 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.features .passion .image-holder::before {
+  background-color: #03a9f4;
+}
+
+.features .passion h2::after {
+  background-color: #03a9f4;
+}
+
+.features .passion a {
+  color: #03a9f4;
+  border: 2px solid #03a9f4;
+  background: linear-gradient(to right, #03a9f4 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.features .box:hover a {
+  background-position: left bottom;
+  color: white;
+}
+
 @keyframes up-and-down {
   0%,
   100% {
@@ -520,7 +679,7 @@ header .mega-menu > ul li a i {
   100% {
     left: 0;
     border-radius: 0;
-    width: 50%;
+    width: 51%;
     height: 100%;
   }
 }
@@ -535,7 +694,7 @@ header .mega-menu > ul li a i {
   100% {
     right: 0;
     border-radius: 0;
-    width: 50%;
+    width: 51%;
     height: 100%;
   }
 }
