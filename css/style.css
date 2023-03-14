@@ -513,11 +513,13 @@ header .mega-menu > ul li a i {
 .features .box {
   text-align: center;
   border: 1px solid var(--border-color);
+  border-radius: var(--main-radius);
 }
 
 .features .box .image-holder {
   position: relative;
   overflow: hidden;
+  border-radius: var(--main-radius) var(--main-radius) 0 0;
 }
 
 .features .box .image-holder::before {
@@ -536,13 +538,13 @@ header .mega-menu > ul li a i {
   bottom: 0;
   right: 0;
   border-style: solid;
-  border-width: 0 0 175px 500px;
+  border-width: 0 0 175px 650px;
   border-color: transparent transparent white transparent;
   transition: var(--transition-duration);
 }
 
 .features .box:hover .image-holder::after {
-  border-width: 0 500px 175px 0;
+  border-width: 0 650px 175px 0;
 }
 
 .features .box .image-holder img {
@@ -560,7 +562,7 @@ header .mega-menu > ul li a i {
 .features .box h2::after {
   content: "";
   position: absolute;
-  bottom: -20px;
+  bottom: -8px;
   left: 15px;
   width: calc(100% - 30px);
   height: 3px;
@@ -579,7 +581,6 @@ header .mega-menu > ul li a i {
   width: fit-content;
   margin: 0 auto 30px;
   padding: 10px 30px;
-  border: none;
   font-size: 24px;
   font-weight: bold;
   border-radius: var(--main-radius);
