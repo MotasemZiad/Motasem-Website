@@ -642,6 +642,57 @@ header .mega-menu > ul li a i {
   border: 2px solid white;
 }
 
+.testimonials {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  position: relative;
+  background-color: var(--section-background);
+}
+
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testimonials .box {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.08);
+  border-radius: var(--main-radius);
+  position: relative;
+}
+
+.testimonials .box img {
+  position: absolute;
+  right: -10px;
+  top: -50px;
+  width: 100px;
+  border-radius: 50%;
+  border: 10px solid var(--section-background);
+}
+
+.testimonials .box h3 {
+  margin: 0 0 8px;
+}
+
+.testimonials .box span.title {
+  display: block;
+  color: var(--grey-color);
+  opacity: 0.6;
+  margin: 0 0 12px;
+}
+
+.testimonials .box .rate {
+  color: #ffc107;
+}
+
+.testimonials .box p {
+  color: var(--grey-color);
+  line-height: var(--line-height);
+  margin: 12px 0 0;
+}
+
 @keyframes up-and-down {
   0%,
   100% {
