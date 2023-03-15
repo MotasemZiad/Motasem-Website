@@ -794,6 +794,105 @@ header .mega-menu > ul li a i {
   margin-top: 8px;
 }
 
+.services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+  position: relative;
+}
+
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.services .box {
+  background-color: white;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  counter-increment: services;
+  transition: var(--transition-duration);
+  position: relative;
+}
+
+.services .box:hover {
+  transform: translateY(-10px);
+}
+
+.services .box::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 0;
+  background-color: var(--primary-color);
+  transition: var(--transition-duration);
+}
+
+.services .box:hover::before {
+  width: 100%;
+}
+
+.services .box i {
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+  color: #d5d5d5;
+}
+
+.services .box h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+  font-size: 24px;
+}
+
+.services .box .info {
+  position: relative;
+  padding: 15px;
+  background-color: var(--light-grey-color);
+  text-align: right;
+}
+
+.services .box .info::before {
+  content: "0" counter(services);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+.services .box .info::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80px;
+  background-color: #d5d5d5;
+  width: 50px;
+  height: calc(100% + 0.5px);
+  transform: skewX(-30deg);
+}
+
+.services .box .info a {
+  color: var(--grey-color);
+  transition: var(--transition-duration);
+}
+
+.services .box .info a:hover {
+  color: var(--primary-color);
+}
+
 @keyframes up-and-down {
   0%,
   100% {
