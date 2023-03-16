@@ -794,6 +794,37 @@ header .mega-menu > ul li a i {
   margin-top: 8px;
 }
 
+@media (max-width: 767px) {
+  .team-members .box::before,
+  .team-members .box::after {
+    background-color: #e4e4e4;
+  }
+
+  .team-members .box::before {
+    background-color: #f3f3f3;
+  }
+
+  .team-members .box::after {
+    background-color: #e4e4e4;
+  }
+
+  .team-members .data img {
+    filter: grayscale(0%);
+  }
+
+  .team-members .box:hover .data img {
+    filter: grayscale(100%);
+  }
+
+  .team-members .info h3 {
+    color: var(--primary-color);
+  }
+
+  .team-members .box:hover .info h3 {
+    color: var(--grey-color);
+  }
+}
+
 .services {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
