@@ -1217,6 +1217,148 @@ header .mega-menu > ul li a i {
   }
 }
 
+.pricing-plans {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  position: relative;
+  background-color: var(--section-background-color);
+}
+
+.pricing-plans .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.pricing-plans .box {
+  position: relative;
+  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
+    0px 2px 4px 0px rgb(0 0 0 / 12%);
+  transition: var(--transition-duration);
+  background-color: white;
+  text-align: center;
+  border-radius: var(--main-radius);
+  z-index: 1;
+}
+
+.pricing-plans .box::before,
+.pricing-plans .box::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 50%;
+  background-color: #f6f5f5;
+  border-radius: var(--main-radius);
+  transition: var(--transition-duration);
+  z-index: -1;
+}
+
+.pricing-plans .box::before {
+  left: 0;
+  top: 0;
+}
+
+.pricing-plans .box::after {
+  right: 0;
+  bottom: 0;
+}
+
+.pricing-plans .box:hover::before,
+.pricing-plans .box:hover::after {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .pricing-plans .box.popular {
+    top: -20px;
+  }
+}
+
+.pricing-plans .box.popular .label {
+  position: absolute;
+  writing-mode: vertical-rl;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px 35px;
+  right: 20px;
+  width: 40px;
+}
+
+.pricing-plans .box.popular .label::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 20px;
+  border-color: transparent transparent white transparent;
+}
+
+.pricing-plans .box h3 {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -1;
+  margin: 30px 0;
+}
+
+.pricing-plans .box > img {
+  max-width: 100%;
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+.pricing-plans .box .price {
+  margin-bottom: 20px;
+}
+
+.pricing-plans .box .price span:first-child {
+  display: block;
+  font-size: 64px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.pricing-plans .box .price span:last-child {
+  color: var(--grey-color);
+}
+
+.pricing-plans .box ul {
+  text-align: left;
+}
+
+.pricing-plans .box ul li {
+  padding: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.pricing-plans .box ul li::before {
+  content: "\f00c";
+  font: var(--fa-font-solid);
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+.pricing-plans .box a {
+  display: block;
+  width: fit-content;
+  padding: 15px 20px;
+  margin: 30px auto 40px;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: calc(var(--main-radius) / 2);
+  transition: var(--transition-duration);
+}
+
+.pricing-plans .box a:hover {
+  background-color: var(--primary-color-alt);
+  border-color: var(--primary-color-alt);
+  color: white;
+}
+
 @keyframes up-and-down {
   0%,
   100% {
