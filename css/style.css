@@ -1248,17 +1248,18 @@ header .mega-menu > ul li a i {
   width: 0;
   height: 50%;
   background-color: #f6f5f5;
-  border-radius: var(--main-radius);
   transition: var(--transition-duration);
   z-index: -1;
 }
 
 .pricing-plans .box::before {
+  border-radius: var(--main-radius) var(--main-radius) 0 0;
   left: 0;
   top: 0;
 }
 
 .pricing-plans .box::after {
+  border-radius: 0 0 var(--main-radius) var(--main-radius);
   right: 0;
   bottom: 0;
 }
