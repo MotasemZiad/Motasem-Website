@@ -1629,15 +1629,145 @@ header .mega-menu > ul li a i {
   .discount .content h2 {
     margin: 20px 0;
   }
+
+  .discount .form {
+    margin-bottom: 20px;
+  }
 }
 
 footer {
+  background-color: #191919;
+  padding: 70px 0 0;
 }
 
 footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
 }
 
-footer .box {
+footer .box h3 {
+  color: white;
+  font-size: 48px;
+  margin: 0 0 20px;
+}
+
+footer .box .social-icons {
+  display: flex;
+}
+
+footer .box .social-icons li {
+  margin-right: 10px;
+}
+
+footer .box .social-icons li a {
+  background-color: #313131;
+  color: #b9b9b9;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  transition: var(--transition-duration);
+}
+
+footer .box .social-icons li a.facebook:hover {
+  background-color: #1877f2;
+}
+
+footer .box .social-icons li a.twitter:hover {
+  background-color: #1da1f2;
+}
+
+footer .box .social-icons li a.youtube:hover {
+  background-color: #ff0000;
+}
+
+footer .box .text {
+  margin-top: 10px;
+  line-height: calc(var(--line-height) * 1.2);
+  color: #b9b9b9;
+}
+
+footer .box .links li {
+  padding: 15px 0;
+  transition: var(--transition-duration);
+  position: relative;
+}
+
+footer .box .links li:not(:last-child) {
+  border-bottom: 1px solid #444;
+}
+
+footer .box .links li::before {
+  content: "\F101";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+footer .box .links li:hover {
+  padding-left: 10px;
+}
+
+footer .box .links li a {
+  color: #b9b9b9;
+  transition: var(--transition-duration);
+}
+
+footer .box .links li:hover a {
+  color: white;
+}
+
+footer .box .line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b9b9b9;
+  margin-bottom: 30px;
+}
+
+footer .box .line i {
+  font-size: 25px;
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+footer .box .line .info {
+  line-height: calc(var(--line-height) * 1.1);
+  flex: 1;
+}
+
+footer .box .line .info span {
+  display: block;
+}
+
+footer .box .footer-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .footer-gallery img {
+  width: 78px;
+  max-width: 100%;
+  border: 3px solid white;
+  margin: 2px;
+}
+
+footer .copyright {
+  padding: 25px 0;
+  margin: 50px 0 0;
+  text-align: center;
+  border-top: 1px solid #444;
+  color: white;
+}
+
+footer .copyright a {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
 }
 
 @keyframes up-and-down {
