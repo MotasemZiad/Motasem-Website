@@ -1519,6 +1519,63 @@ header .mega-menu > ul li a i {
   }
 }
 
+.discount {
+}
+
+.discount .image {
+}
+
+.discount .image .content {
+}
+
+.discount .image .content h2 {
+}
+
+.discount .image .content p {
+}
+
+.discount .image .content img {
+}
+
+.discount .form {
+}
+
+.discount .form .content {
+}
+
+.discount .form h2 {
+}
+
+.discount .form .content form {
+}
+
+.discount .form .content h2 {
+}
+
+.discount form {
+}
+
+.discount form input {
+}
+
+.discount form ::placeholder {
+}
+
+.discount form input[type="text"] {
+}
+
+.discount form input[type="email"] {
+}
+
+.discount form input[type="tel"] {
+}
+
+.discount form textarea {
+}
+
+.discount form input[type="submit"] {
+}
+
 @keyframes up-and-down {
   0%,
   100% {
