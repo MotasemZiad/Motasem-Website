@@ -1360,6 +1360,16 @@ header .mega-menu > ul li a i {
   color: white;
 }
 
+.top-videos {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: white;
+  position: relative;
+}
+
+.top-videos .container {
+}
+
 @keyframes up-and-down {
   0%,
   100% {
