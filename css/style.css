@@ -1370,6 +1370,36 @@ header .mega-menu > ul li a i {
 .top-videos .container {
 }
 
+.top-videos .holder {
+}
+
+.top-videos .list {
+}
+
+.top-videos .list .name {
+}
+
+.top-videos .list .name i {
+}
+
+.top-videos .list ul {
+}
+
+.top-videos .list ul li {
+}
+
+.top-videos .list ul li:hover {
+}
+
+.top-videos .preview {
+}
+
+.top-videos .preview img {
+}
+
+.top-videos .preview .info {
+}
+
 @keyframes up-and-down {
   0%,
   100% {
