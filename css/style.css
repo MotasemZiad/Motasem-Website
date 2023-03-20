@@ -134,12 +134,12 @@ ul {
 }
 
 .dots-up {
-  top: 200px;
+  top: 100px;
   right: 0;
 }
 
 .dots-down {
-  top: bottom 200px;
+  bottom: 100px;
   left: 0;
 }
 
