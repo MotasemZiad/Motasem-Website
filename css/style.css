@@ -133,6 +133,16 @@ ul {
   position: absolute;
 }
 
+.dots-up {
+  top: 200px;
+  right: 0;
+}
+
+.dots-down {
+  top: bottom 200px;
+  left: 0;
+}
+
 @media (max-width: 991px) {
   .dots {
     display: none;
