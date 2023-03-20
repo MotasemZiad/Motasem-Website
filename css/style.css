@@ -109,6 +109,36 @@ ul {
   animation: right-move 500ms linear forwards;
 }
 
+.spikes {
+  position: relative;
+}
+
+.spikes::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%),
+    linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
+}
+
+.dots {
+  background-image: url(../assets/images/dots.png);
+  width: 204px;
+  height: 186px;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+@media (max-width: 991px) {
+  .dots {
+    display: none;
+  }
+}
+
 header {
   --header-height: 72px;
   position: relative;
@@ -428,22 +458,6 @@ header .mega-menu > ul li a i {
 
 .articles .box:hover i {
   animation: moving-arrow 600ms linear infinite;
-}
-
-.spikes {
-  position: relative;
-}
-
-.spikes::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 30px;
-  z-index: 1;
-  background-image: linear-gradient(135deg, white 25%, transparent 25%),
-    linear-gradient(225deg, white 25%, transparent 25%);
-  background-size: 30px 30px;
 }
 
 .gallery {
