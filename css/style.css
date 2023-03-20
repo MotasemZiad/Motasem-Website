@@ -1770,6 +1770,25 @@ footer .copyright a {
   color: var(--primary-color);
 }
 
+@media (max-width: 767px) {
+  footer {
+    text-align: center;
+  }
+
+  footer .box .social-icons {
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer .box .line {
+    flex-direction: column;
+  }
+
+  footer .box .line i {
+    margin-bottom: 10px;
+  }
+}
+
 @keyframes up-and-down {
   0%,
   100% {
