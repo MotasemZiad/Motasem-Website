@@ -462,6 +462,10 @@ header .mega-menu > ul li a i {
   font-weight: bold;
 }
 
+.articles .box .info a:hover {
+  text-decoration: underline;
+}
+
 .articles .box .info i {
   color: var(--primary-color);
 }
@@ -946,6 +950,7 @@ header .mega-menu > ul li a i {
 
 .services .box .info a:hover {
   color: var(--primary-color);
+  text-decoration: underline;
 }
 
 .our-skills {
