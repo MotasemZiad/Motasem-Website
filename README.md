@@ -4,7 +4,7 @@ This is an amazing website built with vanilla HTML, CSS, and JS as part of my #1
 
 # Live-website
 
-<motasemziad.github.io/Motasem-Website>
+<https://motasemziad.github.io/Motasem-Website>
 
 # Screenshot
 
