@@ -1008,6 +1008,7 @@ header .mega-menu > ul li a i {
   height: 100%;
   background-color: var(--primary-color);
   border-radius: calc(var(--main-radius) / 2);
+  transition: width var(--transition-duration) linear;
 }
 
 .how-it-works {

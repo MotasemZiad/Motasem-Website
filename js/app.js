@@ -27,3 +27,13 @@ function startCounting(element) {
 }
 
 // skills progress section
+let ourSkillsSection = document.querySelector(".our-skills");
+let progressSpans = document.querySelectorAll(".our-skills .progress span");
+
+window.onscroll = () => {
+  if (window.scrollY >= ourSkillsSection.offsetTop - 100) {
+    progressSpans.forEach(
+      (element) => (element.style.width = element.dataset.width)
+    );
+  }
+};
