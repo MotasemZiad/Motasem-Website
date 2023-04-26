@@ -75,7 +75,7 @@ ul {
 
 .main-title:hover {
   color: white;
-  border-color: white;
+  border-color: transparent;
   transition-delay: 500ms;
 }
 
