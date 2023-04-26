@@ -1322,7 +1322,13 @@ header .mega-menu > ul li a i {
   right: 0;
   border-style: solid;
   border-width: 20px;
+  transition: var(--transition-duration);
   border-color: transparent transparent white transparent;
+}
+
+.pricing-plans .box.popular:hover .label::before {
+  border-color: transparent transparent #f6f5f5 transparent;
+  transition-delay: 100ms;
 }
 
 .pricing-plans .box h3 {
