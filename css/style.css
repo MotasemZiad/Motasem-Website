@@ -149,6 +149,25 @@ ul {
   }
 }
 
+.up {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: calc(var(--main-radius) / 2);
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: var(--transition-duration);
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.up:hover {
+  background-color: var(--primary-color-alt);
+}
+
 header {
   --header-height: 72px;
   position: relative;

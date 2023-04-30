@@ -48,6 +48,9 @@ function startCounting(element) {
 let ourSkillsSection = document.querySelector(".our-skills");
 let progressSpans = document.querySelectorAll(".our-skills .progress span");
 
+// scroll to top
+let btnScrollToTop = document.querySelector("div.up");
+
 window.onscroll = () => {
   if (window.scrollY >= ourSkillsSection.offsetTop - 100) {
     progressSpans.forEach(
@@ -60,4 +63,19 @@ window.onscroll = () => {
       statisticsNumbers.forEach((element) => startCounting(element));
     started = true;
   }
+
+  if (window.scrollY >= 1000) {
+    btnScrollToTop.style.opacity = "1";
+    btnScrollToTop.style.visibility = "visible";
+  } else {
+    btnScrollToTop.style.opacity = "0";
+    btnScrollToTop.style.visibility = "hidden";
+  }
+};
+
+btnScrollToTop.onclick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 };
